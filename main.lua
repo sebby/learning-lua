@@ -1,6 +1,6 @@
 
 -- Charger un module custom et ensuite appel d'une méthdode identifié.
-local module1 =  require ('module1')
+local module1 = require ('module1')
 module1.titi('Hello world');
 
 
@@ -33,6 +33,7 @@ print (ma_variable)
 
 -- @todo Comment créer une fonction et l'utiliser ??
 local mafunction = function (arg1, arg2)
+  -- concatenate sur les 2 arguments.
   return 'appel la mafunction >>>>> foo: '..arg1..' bar: '.. arg2
 end
 
