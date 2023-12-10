@@ -18,29 +18,27 @@ else
   print 'Aucune condition n\'est vraie'
 end
 
-
-
 do
   -- Avec le local, on a une portée de variables assez précis.
   local ma_variable = 'Foo';
 end
-
 print (ma_variable)
 
 
--- @todo Comment crere une fonction et l'utiliser ??
-
+-- @todo Comment créer une fonction et l'utiliser ??
 local mafunction = function (arg1, arg2)
   return 'foo: '..arg1, 'bar: '.. arg2
 end
 
 
-local toto = mafunction ("flag 1","flag2")
-
-print (toto)
-
-
-
 local a = { d = 5, [12] = "foo", ['chaîne avec espace'] = true }
+local b = { "foo" }
+print (type(a))
+table.insert(b, 'awiki')
+table.sort(b)
+local data_b = table.concat(b,'|')
+print (data_b)
 
-print (a.d)
+-- local space = string.byte(' ')
+-- space  = 32
+
