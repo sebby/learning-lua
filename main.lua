@@ -1,10 +1,10 @@
+
+-- Charger un module custom et ensuite appel d'une méthdode identifié.
 local module1 =  require ('module1')
-
-
 module1.titi('Hello world');
 
 
--- voici un fichier en lua
+-- @todo voici un fichier en lua
 -- voir une boucle for
 for i  = 1, 5, 1 do
   -- Comment faire une concaténation ??
@@ -62,3 +62,5 @@ for i, v in pairs(tableau) do
 end
 
 print (table.concat(tableau, ' | '))
+-- # est le length operator http://www.lua.org/manual/5.1/manual.html#2.5.5
+print (math.random(#tableau))
