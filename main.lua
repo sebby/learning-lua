@@ -1,3 +1,9 @@
+local module1 =  require ('module1')
+
+
+module1.titi('Hello world');
+
+
 -- voici un fichier en lua
 -- voir une boucle for
 for i  = 1, 5, 1 do
@@ -27,9 +33,10 @@ print (ma_variable)
 
 -- @todo Comment créer une fonction et l'utiliser ??
 local mafunction = function (arg1, arg2)
-  return 'foo: '..arg1, 'bar: '.. arg2
+  return 'appel la mafunction >>>>> foo: '..arg1..' bar: '.. arg2
 end
 
+print (mafunction('arg1', 'arg2'))
 
 local a = { d = 5, [12] = "foo", ['chaîne avec espace'] = true }
 local b = { "foo" }
@@ -47,10 +54,9 @@ print (b)
 
 -- Fonction pairs()
 local tableau = {'item1', 'item2', 'item3', 'item4', 'item5', 'item6'}
-
 for i, v in pairs(tableau) do
   if v == 'item6' then
-    table.remove(tableau, i) 
+    table.remove(tableau, i)
     break
   end
 end
