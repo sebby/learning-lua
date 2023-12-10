@@ -3,6 +3,7 @@
 local module1 = require ('module1')
 module1.titi('Hello world');
 
+print(module1.tata())
 
 -- @todo voici un fichier en lua
 -- voir une boucle for
