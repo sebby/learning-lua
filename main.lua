@@ -38,7 +38,21 @@ table.insert(b, 'awiki')
 table.sort(b)
 local data_b = table.concat(b,'|')
 print (data_b)
+print (b)
 
 -- local space = string.byte(' ')
 -- space  = 32
 
+
+
+-- Fonction pairs()
+local tableau = {'item1', 'item2', 'item3', 'item4', 'item5', 'item6'}
+
+for i, v in pairs(tableau) do
+  if v == 'item6' then
+    table.remove(tableau, i) 
+    break
+  end
+end
+
+print (table.concat(tableau, ' | '))
