@@ -1,16 +1,20 @@
-
 -- Charger un module custom et ensuite appel d'une méthdode identifié.
-local module1 = require ('module1')
-module1.titi('Hello world');
+local module_renaming = require('module1')
+module_renaming.titi('Hello world');
 
-print(module1.tata())
+print(module_renaming.tata())
+
+local machine = require('machine')
+
+
+machine.getInformations()
+
 
 -- @todo voici un fichier en lua
 -- voir une boucle for
-for i  = 1, 5, 1 do
+for i = 1, 5, 1 do
   -- Comment faire une concaténation ??
   print('Position: ' .. i)
-
 end
 
 -- @todo une boucle while.
@@ -28,34 +32,33 @@ end
 do
   -- Avec le local, on a une portée de variables assez précis.
   local ma_variable = 'Foo';
+  print(ma_variable)
 end
-print (ma_variable)
+
 
 
 -- @todo Comment créer une fonction et l'utiliser ??
-local mafunction = function (arg1, arg2)
+local mafunction = function(arg1, arg2)
   -- concatenate sur les 2 arguments.
-  return 'appel la mafunction >>>>> foo: '..arg1..' bar: '.. arg2
+  return 'appel la mafunction >>>>> foo: ' .. arg1 .. ' bar: ' .. arg2
 end
 
-print (mafunction('arg1', 'arg2'))
+print(mafunction('arg1', 'arg2'))
 
 local a = { d = 5, [12] = "foo", ['chaîne avec espace'] = true }
 local b = { "foo" }
-print (type(a))
+print(type(a))
 table.insert(b, 'awiki')
 table.sort(b)
-local data_b = table.concat(b,'|')
-print (data_b)
-print (b)
+local data_b = table.concat(b, '|')
+print(data_b)
+print(b)
 
 -- local space = string.byte(' ')
--- space  = 32
-
-
+-- space = 32
 
 -- Fonction pairs()
-local tableau = {'item1', 'item2', 'item3', 'item4', 'item5', 'item6'}
+local tableau = { 'item1', 'item2', 'item3', 'item4', 'item5', 'item6' }
 for i, v in pairs(tableau) do
   if v == 'item6' then
     table.remove(tableau, i)
@@ -63,6 +66,8 @@ for i, v in pairs(tableau) do
   end
 end
 
-print (table.concat(tableau, ' | '))
+print(table.concat(tableau, ' | '))
 -- # est le length operator http://www.lua.org/manual/5.1/manual.html#2.5.5
-print (math.random(#tableau))
+print(math.random(#tableau))
+
+-- print(vim.fs.dir('./'))
